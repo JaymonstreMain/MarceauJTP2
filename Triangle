@@ -1,0 +1,53 @@
+public class Triangle {
+    private int coteA;
+    private int coteB;
+    private int coteC;
+
+    public Triangle(int CoteA, int coteB, int coteC){
+        super(nom);
+        if (validerCote(coteA) && validerCote(coteB) && validerCote(coteC)){
+
+        }
+    }
+
+    public int calculerPerimetre() {
+        return (coteA + coteB + coteC);
+    }
+
+    public int calculerSurface() {
+        //Triangle rectangle, triangle isocèle, triangle equilateral
+    }
+
+    public int getCoteA() {
+        return coteA;
+    }
+
+    public int getCoteB() {
+        return coteB;
+    }
+
+    public int getCoteC() {
+        return coteC;
+    }
+
+    public static Triangle getNbCoteEgaux() {
+        int nbCoteEgaux;
+        if (coteA = coteB...)
+        return ;
+    }
+    //Calculer le nb de cote egaux
+
+
+    private static boolean validerCote(int cote) {
+        return (coteA >= Forme.MIN_VAL && coteA <= Forme.MAX_VAL &&
+                coteB >= Forme.MIN_VAL && coteB <= Forme.MAX_VAL &&
+                coteB >= Forme.MIN_VAL && coteB <= Forme.MAX_VAL);
+    }
+}
+
+/*
+aire = a demie perimetre est p
+
+racine de (p(p-a)(p-b)(p-c))
+
+*/
