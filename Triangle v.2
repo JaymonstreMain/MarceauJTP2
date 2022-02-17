@@ -1,0 +1,66 @@
+package triangle;
+
+public class Triangle {
+    private int coteA;
+    private int coteB;
+    private int coteC;
+
+    public Triangle(int CoteA, int coteB, int coteC) throws FormeException{
+        super("Triangle");
+        if (validerCote(coteA) && validerCote(coteB) && validerCote(coteC)){
+
+        }
+        else{
+            throw new FormeException("Parametre invalide passe au constructeur de la classe Triangle");
+        }
+    }
+
+    public int calculerPerimetre() {
+        return (coteA + coteB + coteC);
+    }
+
+    public int calculerSurface(){
+        double p = calculerPerimetre() / 2;
+        return (int) Math.sqrt(p * (p - coteA) * (p - coteB) * (p - coteC));
+    }
+
+    public int getCoteA() {
+        return coteA;
+    }
+
+    public int getCoteB() {
+        return coteB;
+    }
+
+    public int getCoteC() {
+        return coteC;
+    }
+
+    private int getNbCoteEgaux() {
+        int nbCoteEgaux = 0;
+        if (coteA == coteB || coteA == coteC || coteB == coteC )
+            nbCoteEgaux++;
+        return (nbCoteEgaux);
+    }
+//  scalene = 3 cote différents
+//  isocele = au moin 2 cote egaux
+//  equilateral = tout les angles et cote sont egaux
+//  rectangle = angle 90deg
+    public TypeTriangle getType(){
+        if(getNbCoteEgaux() == 0)
+            
+
+
+    }
+
+
+
+    //Calculer le nb de cote egaux
+
+
+    private static boolean validerCote(int cote) {
+        return (cote >= MIN_VAL && cote <= MAX_VAL);
+
+    }
+}
+
